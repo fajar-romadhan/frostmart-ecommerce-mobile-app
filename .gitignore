@@ -1,0 +1,49 @@
+﻿# Dependencies
+node_modules/
+vendor/
+.pnp
+.pnp.js
+
+# Environment & Private Configuration
+.env
+.env.backup
+.env.production
+*.local
+
+# Mobile & Expo Build Artifacts
+.expo/
+.expo-shared/
+dist/
+web-build/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Backend Laravel Storage & Cache
+backend_api/storage/framework/cache/data/*
+!backend_api/storage/framework/cache/data/.gitignore
+backend_api/storage/framework/sessions/*
+!backend_api/storage/framework/sessions/.gitignore
+backend_api/storage/framework/views/*
+!backend_api/storage/framework/views/.gitignore
+backend_api/storage/logs/*
+!backend_api/storage/logs/.gitignore
+backend_api/storage/app/public/ktp_photos/*
+backend_api/storage/app/public/payments/*
+.phpunit.result.cache
+
+# Logs & Debugging
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE & Operating System
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
