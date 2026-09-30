@@ -1,4 +1,4 @@
-﻿# FrostMart — Hyperlocal Quick Commerce & Mobile E-Commerce Platform
+# FrostMart - Hyperlocal Quick Commerce & Mobile E-Commerce Platform
 
 [![React Native](https://img.shields.io/badge/React%20Native-0.76-61DAFB.svg?style=flat-square&logo=react&logoColor=black)](https://reactnative.dev/)
 [![Expo](https://img.shields.io/badge/Expo-SDK%2054-000020.svg?style=flat-square&logo=expo&logoColor=white)](https://expo.dev/)
@@ -8,16 +8,16 @@
 [![PHPUnit](https://img.shields.io/badge/PHPUnit-64%20Tests%20Passing-brightgreen.svg?style=flat-square&logo=phpunit&logoColor=white)](https://phpunit.de/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 
-**FrostMart** is a production-grade, full-stack quick commerce platform engineered specifically for cold-chain grocery and hyperlocal retail logistics. Built with a **React Native (Expo SDK 54)** cross-platform mobile client and a **Laravel 11 RESTful API & Blade Management Web Portal**, the platform unifies Customers, Store Cashiers/Admins, and Business Owners into an end-to-end synchronized retail workflow.
+FrostMart is a production-grade, full-stack quick commerce platform engineered specifically for cold-chain grocery and hyperlocal retail logistics. Built with a React Native (Expo SDK 54) cross-platform mobile client and a Laravel 11 RESTful API & Blade Management Web Portal, the platform unifies Customers, Store Cashiers/Admins, and Business Owners into an end-to-end synchronized retail workflow.
 
 ---
 
-## 📸 Visual Showcase & Previews
+## Visual Showcase & Previews
 
 ### 1. Customer Mobile Experience & Loyalty Rewards Engine
 A streamlined shopping journey featuring live catalog filtering, flash offers, multi-method fulfillment checkout, and a gamified customer loyalty points reward club.
 
-| 🏠 Catalog & Deals | 🎁 Loyalty Rewards Club | 🛍️ Multi-Fulfillment Checkout | 📱 Dynamic QRIS & Proof |
+| Catalog & Deals | Loyalty Rewards Club | Multi-Fulfillment Checkout | Dynamic QRIS Payment |
 |:---:|:---:|:---:|:---:|
 | <img src="docs/screenshots/customer_home_preview.png" width="210" alt="Catalog and Home Screen"/> | <img src="docs/screenshots/customer_rewards_preview.png" width="210" alt="Loyalty Rewards Club"/> | <img src="docs/screenshots/customer_checkout_preview.png" width="210" alt="Multi-Fulfillment Checkout"/> | <img src="docs/screenshots/customer_qris_preview.png" width="210" alt="Dynamic QRIS Payment"/> |
 
@@ -33,32 +33,33 @@ Full web management portal featuring live revenue analytics, daily order through
 
 ---
 
-## ⚡ Key Engineering Highlights
+## Key Engineering Highlights
 
-### 🎁 1. Automated Customer Loyalty Points Engine
-- **Formula:** Earns **1 Point per Rp 50.000** spent (applied automatically upon order completion). Points are permanent and never expire.
-- **Redemption:** **10 Points = 1 Free Product** of choice from active inventory.
+### 1. Automated Customer Loyalty Points Engine
+- **Formula:** Earns 1 Point per Rp 50.000 spent (applied automatically upon order completion). Points are permanent and never expire.
+- **Redemption:** 10 Points = 1 Free Product of choice from active inventory.
 - **Dual Redemption Flow:**
   1. *In-Checkout Redemption:* Select a bonus item right inside `CheckoutScreen` (credited at Rp 0).
   2. *Direct Profile Claim:* Redeem reward items instantly from the profile loyalty card without needing a shopping cart order.
 - **Concurrency & Safety:** Idempotent database transactions with pessimistic row locking and automatic point refunds if an order is cancelled.
 
-### 🗺️ 2. Spatially-Aware Geocoding & Satellite Imagery (2.138 Local OSM Points)
+### 2. Spatially-Aware Geocoding & Satellite Imagery (2,138 Local OSM Points)
 - **Local Spatial Dataset:** Over 2,138 mapped locations from OpenStreetMap Overpass API covering streets, POIs, markets, hospitals, and residential areas.
-- **Multi-Layer Geocoding Pipeline:** Resolves coordinates using a 4-tier fallback: Local Cache Engine $\rightarrow$ Google Maps API $\rightarrow$ Photon Komoot $\rightarrow$ Nominatim OSM.
+- **Multi-Layer Geocoding Pipeline:** Resolves coordinates using a 4-tier fallback: Local Cache Engine -> Google Maps API -> Photon Komoot -> Nominatim OSM.
 - **Radius Guard:** Strictly enforces a 10 KM delivery perimeter using the Haversine formula, offering intelligent fallback options for pickup outside the zone.
 - **ArcGIS Satellite View:** Seamless live toggle between standard vector map tiles and high-resolution ArcGIS World Imagery.
 
-### 📲 3. Offline-First QRIS Payment Storage
+### 3. Offline-First QRIS Payment Storage
 - Resolves Expo SDK 54 file-system modernizations by utilizing `expo-file-system/legacy` and `expo-sharing`.
-- Customers can download and share payment barcodes directly to device galleries via Base64 rendering in milliseconds—zero external network required during scanning.
+- Customers can download and share payment barcodes directly to device galleries via Base64 rendering in milliseconds with zero external network required during scanning.
 
-### 🔔 4. Real-Time Notification & Live Chat Hub
+### 4. Real-Time Notification & Live Chat Hub
 - **Two-Way Order Chat:** Integrated communication channel per order between customer and admin with unread tracking badges.
-- **Global Drop-Down Heads-Up Banner:** Spring-animated in-app notification overlay (`NotificationContext`) that slides down across all screens with native vibration and iOS chime audio.
+- **Global Drop-Down Heads-Up Banner:** Spring-animated in-app notification overlay (`NotificationContext`) that slides down across all screens with native vibration and audio chime.
 - **In-Flight Lock Protection:** Prevents network request congestion and eliminates `AbortError` drops during connectivity transitions.
 
-### 📊 5. Multi-Role Management Architecture
+### 5. Multi-Role Management Architecture
+
 | Role | Portal / Client | Key Capabilities |
 |---|---|---|
 | **Customer** | Mobile App (iOS / Android) | Catalog browsing, address pinpointing, order tracking, points redemption, live order chat. |
@@ -67,7 +68,7 @@ Full web management portal featuring live revenue analytics, daily order through
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Mobile Client:**
   - React Native 0.76 & Expo SDK 54
@@ -87,7 +88,7 @@ Full web management portal featuring live revenue analytics, daily order through
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 frostmart-ecommerce-mobile-app/
@@ -99,7 +100,7 @@ frostmart-ecommerce-mobile-app/
 │   │   └── Services/            # PointService, StockService
 │   ├── database/
 │   │   ├── migrations/          # Structured MySQL schema migrations
-│   │   └── seeders/             # Initial seeder data & 2.138 geocache points
+│   │   └── seeders/             # Initial seeder data & 2,138 geocache points
 │   ├── resources/views/         # Admin & Owner Blade templates (Kanban, Reports)
 │   ├── routes/                  # api.php, web.php, console.php
 │   ├── tests/Feature/           # 64 Automated Feature Tests
@@ -120,12 +121,13 @@ frostmart-ecommerce-mobile-app/
 │   ├── screenshots/             # High-resolution portfolio visual previews
 │   └── specs/                   # Technical architecture & design specifications
 ├── .gitignore
+├── LICENSE
 └── README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js (v18.x or v20.x LTS)
@@ -169,17 +171,17 @@ npx expo start
 
 ---
 
-## 🔑 Demo & Test Accounts
+## Demo & Test Accounts
 
 | Role | Email | Password | Access Portal |
 |---|---|---|---|
-| **Customer** | `pelanggan@dellafrozenmart.test` | `password` | Mobile App (iOS / Android) |
-| **Admin** | `admin@dellafrozenmart.test` | `password` | Web Admin (`/admin`) & Mobile |
-| **Owner** | `owner@dellafrozenmart.test` | `password` | Web Owner (`/owner`) & Mobile |
+| **Customer** | `pelanggan@della.test` | `password` | Mobile App (iOS / Android) |
+| **Admin** | `admin@della.test` | `password123` | Web Admin (`/admin`) & Mobile |
+| **Owner** | `owner@della.test` | `1234` | Web Owner (`/owner`) & Mobile |
 
 ---
 
-## 🧪 Automated Testing
+## Automated Testing
 
 FrostMart includes a comprehensive PHPUnit feature test suite covering authentication, stock mutations, order workflows, and loyalty point operations:
 
@@ -196,14 +198,13 @@ Status:   100% PASSING
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Fajar Romadhan**
 - GitHub: [@fajar-romadhan](https://github.com/fajar-romadhan)
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
-
