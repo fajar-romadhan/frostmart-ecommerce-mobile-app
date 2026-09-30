@@ -14,10 +14,12 @@
 
 ## 📸 Visual Showcase & Previews
 
-### 1. Customer Mobile Experience & Della Rewards Club
-A streamlined shopping journey featuring live catalog filtering, flash offers, cart management, and a gamified loyalty points reward card.
+### 1. Customer Mobile Experience & Loyalty Rewards Engine
+A streamlined shopping journey featuring live catalog filtering, flash offers, multi-method fulfillment checkout, and a gamified customer loyalty points reward club.
 
-![Customer Mobile Experience](docs/screenshots/customer_app_preview.jpg)
+| 🏠 Catalog & Deals | 🎁 Loyalty Rewards Club | 🛍️ Multi-Fulfillment Checkout | 📱 Dynamic QRIS & Proof |
+|:---:|:---:|:---:|:---:|
+| <img src="docs/screenshots/customer_home_preview.png" width="210" alt="Catalog and Home Screen"/> | <img src="docs/screenshots/customer_rewards_preview.png" width="210" alt="Loyalty Rewards Club"/> | <img src="docs/screenshots/customer_checkout_preview.png" width="210" alt="Multi-Fulfillment Checkout"/> | <img src="docs/screenshots/customer_qris_preview.png" width="210" alt="Dynamic QRIS Payment"/> |
 
 ### 2. Interactive Satellite Map & Offline-Resilient QRIS
 High-resolution satellite view with a 10 KM delivery radius constraint, multi-layer reverse geocoding, and offline QRIS payment download to the phone gallery.
