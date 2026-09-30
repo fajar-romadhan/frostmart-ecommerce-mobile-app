@@ -21,15 +21,15 @@ A streamlined shopping journey featuring live catalog filtering, flash offers, m
 |:---:|:---:|:---:|:---:|
 | <img src="docs/screenshots/customer_home_preview.png" width="210" alt="Catalog and Home Screen"/> | <img src="docs/screenshots/customer_rewards_preview.png" width="210" alt="Loyalty Rewards Club"/> | <img src="docs/screenshots/customer_checkout_preview.png" width="210" alt="Multi-Fulfillment Checkout"/> | <img src="docs/screenshots/customer_qris_preview.png" width="210" alt="Dynamic QRIS Payment"/> |
 
-### 2. Interactive Satellite Map & Offline-Resilient QRIS
-High-resolution satellite view with a 10 KM delivery radius constraint, multi-layer reverse geocoding, and offline QRIS payment download to the phone gallery.
+### 2. Real-Time Kanban Order Pipeline & Dispatch Hub
+Interactive multi-stage order workflow featuring live status transitions (Menunggu Pembayaran, Menunggu Konfirmasi, Sedang Diproses, Siap Diambil/Dikirim), single-modal courier assignment, and instantaneous order filtering.
 
-![Interactive Satellite Map & Offline QRIS](docs/screenshots/satellite_map_preview.jpg)
+![Real-Time Kanban Order Pipeline](docs/screenshots/admin_kanban_preview.png)
 
 ### 3. Store Admin Operations & Executive Business Analytics
-Full management portal featuring a real-time Kanban order board, single-modal courier dispatch, and live sales performance analytics.
+Full web management portal featuring live revenue analytics, daily order throughput, product catalog control, and automated audit activity logging.
 
-![Admin Kanban Board & Executive Analytics](docs/screenshots/admin_dashboard_preview.jpg)
+![Store Admin Operations & Executive Business Analytics](docs/screenshots/admin_dashboard_preview.png)
 
 ---
 
